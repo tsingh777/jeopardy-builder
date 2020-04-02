@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { GameBoard } from './components/gameboard';
+import styled from 'styled-components';
+import data from './games/marvel1.json'
 
-function App() {
+const PageLayout = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+`;
+export interface Question {
+  q: String
+  a: String
+  value?: Number
+}
+export interface Categories {
+  key: String
+  questions: Array<Question>
+}
+
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageLayout>
+      <GameBoard columns={data} />
+    </PageLayout>
   );
 }
 
-export default App;
