@@ -14,16 +14,23 @@ const TileContainer = styled.div`
     
     display:flex;
     justify-content: center;
+    align-items: center;
+    height: 16%;
+    overflow: hidden;
+    min-height: 20px;
 `;
 
-export const Tile: React.FC<{ question: Question }> = ({ question: { q, a, value } }) => {
-    const [answerShown, setShown] = React.useState(Boolean);
-    const clickCard = () => {
-        setShown(!answerShown);
+
+export const JeopardyBoardTile: React.FC<{ question: Question, onClick(selection: Question): void }> = ({ question, onClick }) => {
+    const [questionSelected, setQuestionSelected] = React.useState<boolean>(false);
+    const selectQuestion = () => {
+        setQuestionSelected(true);
+        onClick(question);
     };
+
     return (
-        <TileContainer onClick={clickCard}>
-            {answerShown ? a : q }
+        <TileContainer onClick={selectQuestion}>
+            {questionSelected ? '' : question.value}
         </TileContainer>
     );
 }

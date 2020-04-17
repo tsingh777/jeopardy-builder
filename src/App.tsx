@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import { GameBoard } from './components/gameboard';
 import styled from 'styled-components';
-import data from './games/marvel1.json'
+import SuperHeroData from './games/superHeros1.json';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { WelcomePage } from './pages/WelcomPage';
+import { GameUploader } from './components/uploader';
 
-const PageLayout = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-`;
 export interface Question {
   q: String
   a: String
@@ -21,9 +24,21 @@ export interface Categories {
 
 export const App = () => {
   return (
-    <PageLayout>
-      <GameBoard columns={data} />
-    </PageLayout>
+    <React.Fragment>
+      <Router>
+        <Switch>
+          <Route path="/heros">
+            <GameBoard columns={SuperHeroData} />
+          </Route>
+          <Route path="/custom">
+            <GameUploader />
+          </Route>
+          <Route path="/">
+            <WelcomePage />
+          </Route>
+        </Switch>
+      </Router>
+    </React.Fragment>
   );
 }
 

@@ -1,0 +1,52 @@
+[
+    {
+        "key": "Powers and Sources",
+        "questions": [
+            {
+                "q": "How does a krpytonian develop superhuman powers.",
+                "a": "Yellow sun radiation"
+            },
+            {
+                "q": "Sinistro corp member harness this emotion",
+                "a": "Fear"
+            },
+            {
+                "q": "Eobard Thawne taps into this force to becoming the Reverse-Flash",
+                "a": "Negative speed force"
+            },
+            {
+                "q": "What was the serum that gave Steve Rodgers his power",
+                "a": "Super solider serum"
+            },
+            {
+                "q": "These rays acidently gave Bruce Banner the power to become the Hulk",
+                "a": "Gamma rays"
+            }
+        ]
+    },
+    {
+        "key": "Partners",
+        "questions": [
+            {
+                "q": "Kal El had a super dog named?",
+                "a": "Krypto"
+            },
+            {
+                "q": "Green Arrow's partner Speedy/Arsenal/Red Arrow real name is?",
+                "a": "Roy Harper"
+            },
+            {
+                "q": "Aquaman' first protégé went on to become Tempest",
+                "a": "Garth - Aqualad"
+            },
+            {
+                "q": "Sam Wilson aka the falcon has a pet bird named this.",
+                "a": "Redwing"
+            },
+            {
+                "q": "",
+                "a": ""
+            }
+        ]
+    }
+]
