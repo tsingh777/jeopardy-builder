@@ -2,6 +2,7 @@
   "name": "jeopardy-builder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "jeopardy-builder",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -24,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "release-docs": "rm -rf ./docs && yarn build && mv dist/* ./"
+    "release": "rm -rf docs static asset-manifest favicon.ico index.html robots.txt service-worker.js precache-manifest.*.js && yarn build && mv build/* ./"
   },
   "eslintConfig": {
     "extends": "react-app"
