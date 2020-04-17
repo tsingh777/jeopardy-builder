@@ -25,7 +25,7 @@ export interface Categories {
 export const App = () => {
   return (
     <React.Fragment>
-      <Router>
+      <Router basename="jeopardy-builder">
         <Switch>
           <Route path="/heros">
             <GameBoard columns={SuperHeroData} />
